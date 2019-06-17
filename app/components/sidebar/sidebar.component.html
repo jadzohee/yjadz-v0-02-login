@@ -1,0 +1,12 @@
+<mat-sidenav-container class="sidebar-container" *ngIf="shouldRun">
+  <mat-sidenav #sidenav mode="push">
+    <p><button mat-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button></p>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <p><button mat-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
+      <mat-slide-toggle color="accent" (change)="onThemeChange($event)">
+        Dark Theme
+      </mat-slide-toggle>
+    </p>
+  </mat-sidenav-content>
+</mat-sidenav-container>
